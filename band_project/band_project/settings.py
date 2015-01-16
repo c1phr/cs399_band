@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'CS399.urls'
+ROOT_URLCONF = 'band_project.urls'
 
-WSGI_APPLICATION = 'CS399.wsgi.application'
+WSGI_APPLICATION = 'band_project.wsgi.application'
 
 
 # Database
