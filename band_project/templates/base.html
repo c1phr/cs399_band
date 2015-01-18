@@ -27,8 +27,8 @@
     <div class="sidebar-info">
         <div class="sidebar-icon">
             <span class="glyphicon glyphicon-chevron-left" style=""></span>
-            <div class="sidebar-social-media">
-                <div class="row" style="width:90%; margin-left:25px; padding-top:30px; margin-right:0 !important;">
+            <div class="sidebar-social-media hide">
+                <div class="row" style="width:90%; margin-left:30px; padding-top:20px; margin-right:0; padding-right:10px; !important;">
                     <img class="social-img" src="{{ STATIC_URL }}social_icons/email.png"  alt=""/>
                     <img class="social-img" src="{{ STATIC_URL }}social_icons/twitter.png" alt=""/>
                     <img class="social-img" src="{{ STATIC_URL }}social_icons/youtube-variation.png"  alt=""/>
@@ -59,14 +59,18 @@
         $('.sidebar-info').click( function(){
             var glyph = $('.glyphicon');
             if($('.sidebar-info span').hasClass('glyphicon-chevron-left')) {
-                $('.sidebar-info').animate({width: "100px"}, 1000);
+                $('.sidebar-info').animate({width: "110px"}, {complete:
+                function(){
+                    $('.sidebar-social-media').removeClass('hide');
+                }}, 1000);
                 glyph.removeClass('glyphicon-chevron-left');
                 glyph.addClass('glyphicon-chevron-right');
             }
             else{
-            $('.sidebar-info').animate({width: "30px"}, 1000);
-            glyph.removeClass('glyphicon-chevron-right');
-            glyph.addClass('glyphicon-chevron-left');
+                $('.sidebar-social-media').addClass('hide');
+                $('.sidebar-info').animate({width: "30px"}, 1000);
+                glyph.removeClass('glyphicon-chevron-right');
+                glyph.addClass('glyphicon-chevron-left');
             }
         });
     });
