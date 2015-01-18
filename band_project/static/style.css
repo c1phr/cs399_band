@@ -1,0 +1,12 @@
+.navbar
+{
+    background:rgba(52, 73, 94, .8) !important;
+    border-radius: 0 !important;
+}
+.navbar .nav li a{
+    color:white !important;
+}
+.navbar .nav li a:hover{
+    background:rgba(44, 62, 80,.8) !important;
+    color:white !important;
+}
