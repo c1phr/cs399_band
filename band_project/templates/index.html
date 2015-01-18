@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Best Band Ever</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+</head>
+<style>
+    .navbar{
+        background:rgba(52, 73, 94, .8);
+        border-radius: 0;
+    }
+    .navbar .nav li a{
+        color:white;
+    }
+     .navbar .nav li a:hover{
+        background:rgba(44, 62, 80,.8);
+         color:white;
+    }
+</style>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right text-center">
+        <li><a href="#">Tour</a></li>
+        <li ><a href="#">Meet the Band</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">News</a></li>
+        <li> <a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="row text-center">
+        <h3>Meet the Band</h3>
+    </div>
+    <img src="{{STATIC_URL}}instagram.png" alt=""/>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
