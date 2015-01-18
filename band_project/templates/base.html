@@ -1,8 +1,8 @@
 <html>
 <head>
     <title>{% block title %}Best Band Ever{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
     {% block css_links %}{% endblock %}
 </head>
 <style>
@@ -10,7 +10,7 @@
     {% endblock %}
 </style>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="main-nav a">
   <div class="container-fluid">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right text-center">
@@ -23,6 +23,29 @@
     </div>
   </div>
 </nav>
+<div class="sidebar-container">
+    <div class="sidebar-info">
+        <div class="sidebar-icon">
+            <span class="glyphicon glyphicon-chevron-left" style=""></span>
+            <div class="sidebar-social-media">
+                <div class="row" style="width:90%; margin-left:25px; padding-top:30px; margin-right:0 !important;">
+                    <img class="social-img" src="{{STATIC_URL}}email.png"  alt=""/>
+                    <img class="social-img" src="{{STATIC_URL}}twitter.png" alt=""/>
+                    <img class="social-img" src="{{STATIC_URL}}youtube-variation.png"  alt=""/>
+                    <img  class="social-img" src="{{STATIC_URL}}spotify.png"  alt=""/>
+                    <img class="social-img" src="{{STATIC_URL}}instagram.png" alt=""/>
+                    <img class="social-img" src="{{STATIC_URL}}lastfm.png" alt=""/>
+                    <img class="social-img" src="{{STATIC_URL}}soundcloud.png" alt=""/>
+                    <img class="social-img" src="{{STATIC_URL}}facebook.png"  alt=""/>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% block content %}
 {% endblock %}
@@ -30,5 +53,23 @@
 {% block js %}{% endblock %}
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $('.sidebar-info').click( function(){
+            var glyph = $('.glyphicon');
+            if($('.sidebar-info span').hasClass('glyphicon-chevron-left')) {
+                $('.sidebar-info').animate({width: "100px"}, 1000);
+                glyph.removeClass('glyphicon-chevron-left');
+                glyph.addClass('glyphicon-chevron-right');
+            }
+            else{
+            $('.sidebar-info').animate({width: "30px"}, 1000);
+            glyph.removeClass('glyphicon-chevron-right');
+            glyph.addClass('glyphicon-chevron-left');
+            }
+        });
+    });
+</script>
 </body>
 </html>
