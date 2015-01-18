@@ -12,13 +12,23 @@
 <body>
 <nav class="navbar navbar-default" id="main-nav a">
   <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="color:white; cursor:default;">The Night Man Cometh</a>
+    </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right text-center">
+        <li><a href="/">Home</a></li>
         <li><a href="#">Tour</a></li>
-        <li ><a href="/meet">Meet the Band</a></li>
+        <li><a href="/meet">Meet the Band</a></li>
         <li><a href="#">Music</a></li>
         <li><a href="#">News</a></li>
-        <li> <a href="#">Contact Us</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </div>
   </div>
@@ -46,13 +56,13 @@
 {% block content %}
 {% endblock %}
 
-{% block js %}{% endblock %}
+
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function(){
 
-        $('.sidebar-info').click( function(){
+        $('.sidebar-info span').click( function(){
             var glyph = $('.glyphicon');
             if($('.sidebar-info span').hasClass('glyphicon-chevron-left')) {
                 $('.sidebar-info').animate({width: "110px"}, {complete:
@@ -71,5 +81,6 @@
         });
     });
 </script>
+{% block js %}{% endblock %}
 </body>
 </html>

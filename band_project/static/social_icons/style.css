@@ -11,9 +11,11 @@
     color:white !important;
 }
 .sidebar-container{
-    position:absolute;
+    position:fixed;
+    z-index:9999;
     right:0;
     bottom:100px;
+    box-shadow:5px 5px 5px rgb(44, 62, 80);
 }
 .sidebar-info{
     height:180px;
@@ -21,7 +23,8 @@
     background:rgba(149, 165, 166, .7);
     position:relative;
     border-radius:5px 0 0 5px;
-
+    border:black;
+    box-shadow:5px;
 }
 .sidebar-icon .glyphicon{
     color:rgba(52, 73, 94, .8);
@@ -40,4 +43,40 @@
 }
 .social-img:hover{
     opacity:1;
+}
+.valign-box {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    background:rgba(52, 73, 94, .8);
+}
+.valign-box-text{
+    color:white;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+    cursor:default;
+}
+.btn-custom{
+    background:rgba(149, 165, 166, .7) !important;
+    color:white;
+    border-radius:0 !important;
+    border:1px solid black !important;
+}
+.outer-tour-box{
+    height:300px !important;
+    width:100%;
+    padding-right:0 !important;
+    padding-left:0 !important;
+    border:1px solid black;
+    display:table;
+
+}
+.outer-band-box{
+    height:300px !important;
+    width:100%;
+    padding-right:0 !important;
+    padding-left:0 !important;
+    border:1px solid black;
+    display:table;
+
 }

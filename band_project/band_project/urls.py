@@ -5,7 +5,7 @@ from views import home, meet
 
 urlpatterns = patterns('',
     # Examples:
-     url(r'^$', home, name='home'),
+     url(r'^$', home),
      url(r'^meet/', meet),
     # url(r'^blog/', include('blog.urls')),
 
