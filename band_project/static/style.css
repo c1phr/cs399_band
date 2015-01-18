@@ -1,12 +1,29 @@
-.navbar
+.navbar-default
 {
-    background:rgba(52, 73, 94, .8) !important;
-    border-radius: 0 !important;
+    background:rgba(52, 73, 94, .8) !important;
+    border-radius: 0 !important;
 }
 .navbar .nav li a{
-    color:white !important;
+    color:white !important;
 }
 .navbar .nav li a:hover{
     background:rgba(44, 62, 80,.8) !important;
-    color:white !important;
+    color:white !important;
+}
+.sidebar-container{
+    position:absolute;
+    right:0;
+    bottom:100px;
+}
+.sidebar-info{
+    height:200px;
+    width:30px;
+    background:black;
+    position:relative;
+}
+.sidebar-icon .glyphicon{
+    color:white !important;
+    font-size:20px !important;
+    position:absolute !important;
+    top:45% !important;
 }
