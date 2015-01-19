@@ -1,13 +1,18 @@
 .navbar-default
 {
-    background:rgba(52, 73, 94, .8) !important;
+    background:rgba(52, 73, 94, 1) !important;
     border-radius: 0 !important;
+}
+.navbar{
+    position:fixed !important;
+    width:100% !important;
+    z-index:9999 !important;
 }
 .navbar .nav li a{
     color:white !important;
 }
 .navbar .nav li a:hover{
-    background:rgba(44, 62, 80,.8) !important;
+    background:rgba(149, 165, 166, .7) !important;
     color:white !important;
 }
 .sidebar-container{
@@ -48,7 +53,8 @@
     display:table-cell;
     vertical-align:middle;
     text-align:center;
-    background:rgba(52, 73, 94, .8);
+        /*background:rgba(39, 174, 96,1.0)!important;*/
+    background:rgba(52, 73, 94, .9);
 }
 .valign-box-text{
     color:white;
@@ -57,10 +63,12 @@
     cursor:default;
 }
 .btn-custom{
+    /*background:rgba(22, 160, 133,1.0);*/
     background:rgba(149, 165, 166, .7) !important;
     color:white;
     border-radius:0 !important;
     border:1px solid black !important;
+    font-weight:bold !important;
 }
 .outer-tour-box{
     height:300px !important;
@@ -69,6 +77,7 @@
     padding-left:0 !important;
     border:1px solid black;
     display:table;
+
 
 }
 .outer-band-box{
@@ -79,4 +88,7 @@
     border:1px solid black;
     display:table;
 
+}
+.footer span a{
+    color:white !important;
 }
