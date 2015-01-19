@@ -3,14 +3,15 @@
     <title>{% block title %}Best Band Ever{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"/>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
     {% block css_links %}{% endblock %}
 </head>
 <style>
     {% block page_style %}
     {% endblock %}
 </style>
-<body>
-<nav class="navbar navbar-default" id="main-nav a">
+<body >
+<nav style="font-family: 'Open Sans', sans-serif;" class="navbar navbar-default" id="main-nav a">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -59,7 +60,7 @@
 </div>
 {#style="height:50px; background:rgba(52, 73, 94, 1) !important; width:100%;position:fixed; bottom:0;"#}
 {#<footer >#}
-    <div class="row text-center footer" style="height:75px; background:rgba(52, 73, 94, 1) !important; width:100%;position:fixed; bottom:0; ">
+    <div class="row text-center footer" style="height:75px; background:rgba(52, 73, 94, 1) !important; width:100%;position:fixed; bottom:0; font-family: 'Open Sans', sans-serif;">
         <div class="footer-container" style="margin-top: 17px;">
             <span style="margin-top:10px;"><a href="/">Home</a> | <a href="#">Tour</a> | <a href="/meet">Meet the Band</a> | <a href="#">Music</a> | <a href="#">News</a> | <a href="#">Contact Us</a></span>
             <p style="color:white !important;">The Nightman Cometh &copy; 2015</p>
