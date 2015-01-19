@@ -1,7 +1,19 @@
 {% extends "base.html" %}
-
+{% block page_style %}
+    h3{
+        margin-top:0;
+        padding-top:5px;
+        padding-bottom:5px;
+    margin-bottom:0;
+    }
+    h3:hover{
+        cursor:pointer;
+        background:rgba(41, 128, 185,1.0);
+        color:white;
+    }
+{% endblock %}
 {% block content %}
-    <div class="container">
+    <div class="container" style="cursor:default;">
         <div class="row center-block">
             <div class="col-xs-3 text-center outer-tour-box" style="margin-left:4%;">
                 <div class="valign-box" style="">
@@ -37,34 +49,17 @@
             </div>
             <div class="col-xs-3 col-xs-offset-1 text-center outer-tour-box" >
                 <div class="valign-box">
-                    <h2 class="valign-box-text">Tour Dates</h2>
+                    <h2 class="valign-box-text">Meet the Band</h2>
                 </div>
                 <div class="tour-box hide" style="height:100%;">
-                    <h2>Tour Info</h2>
+                    <h2 style="cursor:default;">The Band</h2>
                     <hr style="margin-bottom:0; margin-top:0;"/>
-                    <div class="table-responsive ">
-                        <table class="table text-center">
-                            <thead>
-                                <th style="text-align:center;">Date</th>
-                                <th style="text-align:center;">City</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jan. 23rd</td>
-                                    <td>Flagstaff, AZ</td>
-                                </tr>
-                                <tr>
-                                    <td>Jan. 25th</td>
-                                    <td>Phoenix, AZ</td>
-                                </tr>
-                                <tr class="hidden-sm">
-                                    <td>Jan. 29th</td>
-                                    <td>Tuscon, AZ</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <a class="btn btn-custom" href="/tour" style="">More Info</a>
-                    </div>
+                    <h3 onclick="window.location.href = '/meet#ryan'">Ryan Batchelder</h3>
+                    <h3 onclick="window.location.href = '/meet#duke'">Duke Ayers</h3>
+                    <h3 onclick="window.location.href = '/meet'">Band Member</h3>
+                    <h3 onclick="window.location.href = '/meet'">Band Member</h3>
+                    <h3 onclick="window.location.href = '/meet'">Band Member</h3>
+                    <a class="btn btn-custom" href="#" style="margin-top:10px;">Full Page</a>
                 </div>
             </div>
             <div class="col-xs-3 col-xs-offset-1 text-center outer-tour-box">
