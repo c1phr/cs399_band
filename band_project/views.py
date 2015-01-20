@@ -6,3 +6,12 @@ def home(request):
 
 def meet(request):
     return render(request, 'meet.html')
+
+def tour(request):
+    return render(request, 'tour.html')
+def news(request):
+    return render(request, 'news.html')
+def music(request):
+    return render(request, 'music.html')
+def contact(request):
+    return render(request, 'contact.html')
