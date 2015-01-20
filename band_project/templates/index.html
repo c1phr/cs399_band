@@ -25,10 +25,13 @@
         }
 
     }
+    body{
+        background:rgba(236, 240, 241,1.0);
+    }
 {% endblock %}
 {% block content %}
 
-        <div class="row center-block hidden-sm hidden-xs">
+        <div class="row center-block hidden-sm hidden-xs" style="background:white; padding-top:30px; padding-bottom:30px; border-radius:10px;">
             <div class="col-md-3  text-center outer-tour-box" style="margin-left:4%;">
                 <div class="valign-box" style="">
                     <h2 class="valign-box-text">Tour Dates</h2>
@@ -103,9 +106,21 @@
 {% block js %}
 <script>
     $(document).ready(function(){
+                var paddingTop = ($(this).height() - $('.tour-box').height() - $('nav').height() - $('footer').height() - 100)/2;
+                $('.container').css('margin-top',paddingTop);
+                var marginBottom = -(($('.container').height() - $('.tour-box').height() - $('nav').height() - $('footer').height())/2);
+                $('.row').css('margin-top', marginBottom);
             $('.outer-tour-box').hover(function(){
                 $(this).children('.valign-box').toggleClass('hide');
                 $(this).children('.tour-box').toggleClass('hide');
+            });
+            $(window).resize(function(){
+                var paddingTop = ($(this).height() - $('.tour-box').height() - $('nav').height() - $('footer').height() - 100)/2;
+                $('.container').css('margin-top',paddingTop);
+                console.log($(this).height());
+                                var marginBottom = -(($('.container').height() - $('.tour-box').height() - $('nav').height() - $('footer').height())/2);
+                $('.row').css('margin-top', marginBottom);
+
             });
     });
 
