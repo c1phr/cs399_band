@@ -11,29 +11,6 @@
     {% endblock %}
 </style>
 <body >
-<nav style="font-family: 'Open Sans', sans-serif;" class="navbar navbar-default" id="main-nav a">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" style="color:white; cursor:default;">The Nightman Cometh</a>
-    </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right text-center">
-        <li><a href="/">Home</a></li>
-        <li><a href="/tour">Tour</a></li>
-        <li><a href="/meet">Meet the Band</a></li>
-        <li><a href="/music">Music</a></li>
-        <li><a href="/news">News</a></li>
-        <li><a href="#/contact">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 <div class="sidebar-container">
     <div class="sidebar-info">
         <div class="sidebar-icon">
@@ -53,9 +30,32 @@
         </div>
     </div>
 </div>
-    <div class="container" style="cursor:default; margin-bottom:75px; border-radius:5px;">
-{% block content %}
-{% endblock %}
+<nav style="font-family: 'Open Sans', sans-serif;" class="navbar navbar-default" id="main-nav a">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="color:white; cursor:default;">The Nightman Cometh</a>
+    </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right text-center">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tour">Tour</a></li>
+        <li><a href="/meet">Meet the Band</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+    {% block content %}
+    {% endblock %}
 
 </div>
 {#style="height:50px; background:rgba(52, 73, 94, 1) !important; width:100%;position:fixed; bottom:0;"#}

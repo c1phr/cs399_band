@@ -105,3 +105,15 @@
 .tour-box{
     background:white;
 }
+
+#tour-map {
+    /* Google Maps requires defined height on the map element, Bootstrap col takes care of the width */
+    height: 60%;
+}
+
+.container {
+    cursor:default;
+    margin-bottom:75px;
+    border-radius:5px;
+    margin-top: 75px;
+}

@@ -46,18 +46,12 @@
                                 <th style="text-align:center;">City</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Jan. 23rd</td>
-                                    <td>Flagstaff, AZ</td>
-                                </tr>
-                                <tr>
-                                    <td>Jan. 25th</td>
-                                    <td>Phoenix, AZ</td>
-                                </tr>
-                                <tr class="hidden-sm">
-                                    <td>Jan. 29th</td>
-                                    <td>Tuscon, AZ</td>
-                                </tr>
+                                {% for date in tour_dates %}
+                                    <tr>
+                                        <td>{{ date.date }}</td>
+                                        <td>{{ date.city }}</td>
+                                    </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                         <a class="btn btn-custom" href="/tour" style="font-weight:bold;">More Info</a>
