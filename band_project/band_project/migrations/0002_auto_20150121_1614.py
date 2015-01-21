@@ -5,7 +5,7 @@ import datetime
 from django.db import models, migrations
 from band_project.models import Tour_Dates
 
-
+# Add default data
 def add_dates(apps, schema_editor):
     today = datetime.datetime.now()
 

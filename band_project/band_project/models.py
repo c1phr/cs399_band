@@ -1,5 +1,6 @@
 from django.db import models
 
+# Data model representing tour dates
 class Tour_Dates(models.Model):
     date = models.DateField()
     city = models.CharField(max_length=50)

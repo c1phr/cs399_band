@@ -14,6 +14,7 @@ def meet(request):
 def tour(request):
     return render(request, 'tour.html', {'tour_dates': Tour_Dates.objects.all()})
 
+# Serialize the coordinates for each tour date into JSON to return to the client
 def get_tour_dates(request):
     toRet = serializers.serialize('json', Tour_Dates.objects.all(), fields=('coords_x', 'coords_y'))
     return HttpResponse(toRet, content_type='application/json')

@@ -8,6 +8,7 @@ urlpatterns = patterns('',
      url(r'^$', home),
      url(r'^meet/', meet),
      url(r'^tour/', tour),
+     # Grab the tour date coordinates in JSON
      url(r'^get_tour_dates/', get_tour_dates),
      url(r'^music/', music),
      url(r'^news/', news),
