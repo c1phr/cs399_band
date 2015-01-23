@@ -2,8 +2,8 @@
 {% block page_style %}
 {#Insert any CSS here#}
 .album-container {
-    width: 219;
-    height: 219;
+    width: 219px;
+    height: 219px;
     display: inline-block;
     }
 .album-container:hover .flip, .album-container.hover .flip {
@@ -16,8 +16,8 @@
 .front, .back {
     backface-visibility: hidden;
     position: absolute;
-    width: 219;
-    height: 219;
+    width: 219px;
+    height: 219px;
     }
 .front {
     transform: rotateY(0deg);
@@ -28,10 +28,19 @@
 #table-container{
     width: 219px;
     height: 219px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+tr{
+    height:auto;
     }
 td{
     font-size: 50%;
+    text-align: right;
+    }
+th{
+    text-align: center;
+    font-size: 70%;
     }
 {% endblock %}
 {% block content %}
@@ -45,9 +54,9 @@ td{
                     <img class="img-responsive center-block" src="{{ STATIC_URL }}band_members/tsosie.jpg" alt=""/>
                 </div>
                 <div class="back">
-                    <h3>Album Title</h3>
                     <div id="table-container">
-                        <table class="table table-hover table-bordered table-responsive" style="overflow: scroll">
+                        <h4>Always Funny</h4>
+                        <table class="table table-hover table-responsive" style="overflow: scroll">
                             <tr>
                                 <th>#</th>
                                 <th>Title </th>
@@ -55,63 +64,53 @@ td{
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td></td>
-                                <td></td>
+                                <td>It is about your kid</td>
+                                <td>2:42</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td></td>
-                                <td></td>
+                                <td>No one wants to hear that.</td>
+                                <td>4:06</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td></td>
-                                <td></td>
+                                <td>Milk Steak</td>
+                                <td>3:19</td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td></td>
-                                <td></td>
+                                <td>Cross Country</td>
+                                <td>3:31</td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td></td>
-                                <td></td>
+                                <td>Greenman</td>
+                                <td>4:09</td>
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td></td>
-                                <td></td>
+                                <td>Hurt Himself</td>
+                                <td>2:38</td>
                             </tr>
                             <tr>
                                 <td>7</td>
-                                <td></td>
-                                <td></td>
+                                <td>Experiment</td>
+                                <td>3:02</td>
                             </tr>
                             <tr>
                                 <td>8</td>
-                                <td></td>
-                                <td></td>
+                                <td>Prom Night</td>
+                                <td>4:53</td>
                             </tr>
                             <tr>
                                 <td>9</td>
-                                <td></td>
-                                <td></td>
+                                <td>Sold Us Drugs</td>
+                                <td>3:52</td>
                             </tr>
                             <tr>
                                 <td>10</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td></td>
-                                <td></td>
+                                <td>Clown</td>
+                                <td>3:11</td>
                             </tr>
                         </table>
                     </div>
@@ -126,9 +125,9 @@ td{
                     <img class="img-responsive center-block" src="{{ STATIC_URL }}band_members/sarah.jpg" alt=""/>
                 </div>
                 <div class="back">
-                                        <h3>Album Title</h3>
                     <div id="table-container">
-                        <table class="table table-hover table-bordered table-responsive" style="overflow: scroll">
+                        <h4>The Nightman Cometh</h4>
+                        <table class="table table-hover table-responsive" style="overflow: scroll">
                             <tr>
                                 <th>#</th>
                                 <th>Title </th>
@@ -136,63 +135,43 @@ td{
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td></td>
-                                <td></td>
+                                <td>Intro</td>
+                                <td>0:55</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td></td>
-                                <td></td>
+                                <td>Wildcard</td>
+                                <td>3:00</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td></td>
-                                <td></td>
+                                <td>Boiled Over Hard</td>
+                                <td>3:55</td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td></td>
-                                <td></td>
+                                <td>Sweet Dee</td>
+                                <td>3:37</td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td></td>
-                                <td></td>
+                                <td>Situation Is Different</td>
+                                <td>4:11</td>
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td></td>
-                                <td></td>
+                                <td>Beer</td>
+                                <td>2:35</td>
                             </tr>
                             <tr>
                                 <td>7</td>
-                                <td></td>
-                                <td></td>
+                                <td>Tequila</td>
+                                <td>2:24</td>
                             </tr>
                             <tr>
                                 <td>8</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td></td>
-                                <td></td>
+                                <td>Hangover</td>
+                                <td>5:20</td>
                             </tr>
                         </table>
                     </div>
@@ -208,9 +187,9 @@ td{
                 </div>
 
                 <div class="back">
-                    <h3>Album Title</h3>
                     <div id="table-container">
-                        <table class="table table-hover table-bordered table-responsive" style="overflow: scroll">
+                        <h4>The Dayman Leaveth - EP</h4>
+                        <table class="table table-hover table-responsive" style="overflow: scroll">
                             <tr>
                                 <th>#</th>
                                 <th>Title </th>
@@ -218,63 +197,28 @@ td{
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td></td>
-                                <td></td>
+                                <td>Act I</td>
+                                <td>1:00/td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td></td>
-                                <td></td>
+                                <td>The Waitress</td>
+                                <td>2:38</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td></td>
-                                <td></td>
+                                <td>Cultivating Mass</td>
+                                <td>4:52</td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td></td>
-                                <td></td>
+                                <td>When You Say Sister?</td>
+                                <td>2:07</td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td></td>
-                                <td></td>
+                                <td>Stings, Don't It</td>
+                                <td>3:16</td>
                             </tr>
                         </table>
                     </div>
