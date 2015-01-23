@@ -1,7 +1,16 @@
 {% extends "base.html" %}
-
+{% block page_style %}
+	body
+	{
+		background:rgba(236, 240, 241, 1.0);
+	}
+{% endblock %}
 {% block content %}
-    <div class="row">
+   <div class="container" style="background:white; font-family: 'Open Sans', sans-serif; margin-top:100px; margin-bottom:50px; border-radius:10px; position:relative;">
+	<div class="row text-center">
+        <h1>Tour Dates</h1>
+    </div>
+    <div class="row"  style='padding_top:20px'>
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -29,7 +38,7 @@
         </div>
         <div id="tour-map" class="col-md-8"></div>
     </div>
-
+</div>
 
 {% endblock %}
 {% block js %}
