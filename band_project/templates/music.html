@@ -2,8 +2,8 @@
 {% block page_style %}
 {#Insert any CSS here#}
 .album-container {
-    width: 219px;
-    height: 219px;
+    width: 319px;
+    height: 319px;
     display: inline-block;
     }
 .album-container:hover .flip, .album-container.hover .flip {
@@ -16,8 +16,8 @@
 .front, .back {
     backface-visibility: hidden;
     position: absolute;
-    width: 219px;
-    height: 219px;
+    width: 319px;
+    height: 319px;
     }
 .front {
     transform: rotateY(0deg);
@@ -26,8 +26,8 @@
     transform: rotateY(180deg);
     }
 #table-container{
-    width: 219px;
-    height: 219px;
+    width: 319px;
+    height: 319px;
     overflow-y: scroll;
     overflow-x: hidden;
     }
@@ -35,12 +35,12 @@ tr{
     height:auto;
     }
 td{
-    font-size: 50%;
+    font-size: 80%;
     text-align: right;
     }
 th{
     text-align: center;
-    font-size: 70%;
+    font-size: 90%;
     }
 {% endblock %}
 {% block content %}
@@ -51,7 +51,7 @@ th{
         <div class="album-container" ontouchstart="this.classList.toggle('hover');" style="">
             <div class="flip">
                 <div class="front">
-                    <img class="img-responsive center-block" src="{{ STATIC_URL }}band_members/tsosie.jpg" alt=""/>
+                    <img class="img-responsive center-block" src="{{ STATIC_URL }}album_covers/SelfTitled.jpg" alt=""/>
                 </div>
                 <div class="back">
                     <div id="table-container">
@@ -122,11 +122,11 @@ th{
         <div class="album-container" ontouchstart="this.classList.toggle('hover');" style="">
            <div class="flip">
                 <div class="front">
-                    <img class="img-responsive center-block" src="{{ STATIC_URL }}band_members/sarah.jpg" alt=""/>
+                    <img class="img-responsive center-block" src="{{ STATIC_URL }}album_covers/NoDogs.jpg" alt=""/>
                 </div>
                 <div class="back">
                     <div id="table-container">
-                        <h4>The Nightman Cometh</h4>
+                        <h4>No Dogs</h4>
                         <table class="table table-hover table-responsive" style="overflow: scroll">
                             <tr>
                                 <th>#</th>
@@ -140,17 +140,17 @@ th{
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Wildcard</td>
+                                <td>No Dogs</td>
                                 <td>3:00</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Boiled Over Hard</td>
+                                <td>Ca-Caw!</td>
                                 <td>3:55</td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Sweet Dee</td>
+                                <td>Thief of Snacks</td>
                                 <td>3:37</td>
                             </tr>
                             <tr>
@@ -183,7 +183,7 @@ th{
         <div class="album-container" ontouchstart="this.classList.toggle('hover');" style="">
            <div class="flip">
                 <div class="front">
-                    <img class="img-responsive center-block" src="{{ STATIC_URL }}band_members/ryan.jpg" alt=""/>
+                    <img class="img-responsive center-block" src="{{ STATIC_URL }}album_covers/DaymanLeaveth.jpg" alt=""/>
                 </div>
 
                 <div class="back">
