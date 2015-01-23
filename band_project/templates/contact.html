@@ -3,6 +3,7 @@
 	.row
 	{
 		padding-bottom: .5em;
+
 	}
 	body
 	{
@@ -12,21 +13,39 @@
 {% endblock %}
 {% block content %}
 
-    <div class="container" style="background:white; font-family: 'Open Sans', sans-serif; margin-top:100px; margin-bottom:50px; border-radius:10px;">
+    <div class="container-fluid" style="background:white; font-family: 'Open Sans', sans-serif; margin-top:100px; margin-bottom:50px; border-radius:10px; position:relative;">
 
         <div class="row text-center">
             <h1>Contact Us</h1>
         </div>
         <hr style="margin-top:0" />
-        <div class="container" style="background:black; margin:20px; width: 30%; right: 0px; position:relative;">
-        </div>
-        <div class="row text-left" style="margin-left: 20px;">
-        <p>Name: </p><input type="text" name="name"><br>
-        <br><p>E-mail: </p><input type="text" name="email"><br>
-        <p><br>Message: </p><input type="text" style="height:120px;" name="msg" maxlength="65" size="50" height="50"><br><br>
-    	</div>
+        
+        
+        	<div class="row">
+        		<div class="col-md-8">
+					<p>Name: </p><input type="text" name="name"><br>
+					<br><p>E-mail: </p><input type="text" name="email"><br>
+        			<p><br>Message: </p><input type="text" style="height:120px;" name="msg" maxlength="200" size="50" height="50"><br><br>
+        			<button type="button" class="btn btn-primary">Send</button><br><br>
+        		</div>
 
-
+        		<div class="container col-md-4" style="background:LightBlue; margin:20px; width: 30%; right: 0px; position:absolute; text-align:center">
+        		<p>Phone: 999-555-9955</p><br>
+        		<p>Email: <a href="nightman@notreal.com">Nightman@NotReal.com</a></p><br>
+        		<p>Physical Address: Fake Band Records<br>S. San Francisco St.<br>Flagstaff, AZ</p>
+        		<p>See bottom right side-bar for social media and other links</p>
+        		<p>
+        			<img class="social-img" src="{{ STATIC_URL }}social_icons/email.png"  alt=""/>
+                    <img class="social-img" src="{{ STATIC_URL }}social_icons/twitter.png" alt=""/>
+                    <img class="social-img" src="{{ STATIC_URL }}social_icons/youtube-variation.png"  alt=""/>
+                    <img class="social-img" src="{{ STATIC_URL }}social_icons/spotify.png"  alt=""/>
+                    <img class="social-img" src="{{ STATIC_URL }}social_icons/instagram.png" alt=""/>
+                    <img class="social-img" src="{{ STATIC_URL }}social_icons/lastfm.png" alt=""/>
+                    <img class="social-img" src="{{ STATIC_URL }}social_icons/soundcloud.png" alt=""/>
+                    <img class="social-img" src="{{ STATIC_URL }}social_icons/facebook.png"  alt=""/></p>
+                </div>
+        	</div>
+        
         
     </div>
 
