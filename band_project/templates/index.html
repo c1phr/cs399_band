@@ -94,6 +94,30 @@
                 </div>
             </div>
         </div>
+    <div class="visible-sm visible-xs">
+            <div class="row " style="background:white;">
+                <div class="col-xs-12 text-center">
+                    <h1 style="font-weight:bolder; font-size:18px;">Upcoming Shows</h1>
+                    <div class="table-responsive ">
+                        <table class="table text-center">
+                            <thead>
+                                <th style="text-align:center;">Date</th>
+                                <th style="text-align:center;">City</th>
+                            </thead>
+                            <tbody>
+                                {% for date in tour_dates %}
+                                    <tr>
+                                        <td>{{ date.date }}</td>
+                                        <td>{{ date.city }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                        <a class="btn btn-primary" href="/tour" style="font-weight:bold; margin-bottom:10px;">More Info</a>
+                </div>
+            </div>
+    </div>
 
 
 {% endblock %}
@@ -111,7 +135,6 @@
             $(window).resize(function(){
                 var paddingTop = ($(this).height() - $('.tour-box').height() - $('nav').height() - $('footer').height() - 100)/2;
                 $('.container').css('margin-top',paddingTop);
-                console.log($(this).height());
                                 var marginBottom = -(($('.container').height() - $('.tour-box').height() - $('nav').height() - $('footer').height())/2);
                 $('.row').css('margin-top', marginBottom);
 
