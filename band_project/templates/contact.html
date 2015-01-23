@@ -1,13 +1,33 @@
 {% extends "base.html" %}
 {% block page_style %}
-{#Insert any CSS here#}
+	.row
+	{
+		padding-bottom: .5em;
+	}
+	body
+	{
+		background:rgba(236, 240, 241, 1.0);
+	}
+
 {% endblock %}
 {% block content %}
-{#Main HTML content Goes here#}
-    <div class="container" style="margin-top:100px;">
+
+    <div class="container" style="background:white; font-family: 'Open Sans', sans-serif; margin-top:100px; margin-bottom:50px; border-radius:10px;">
+
         <div class="row text-center">
-            <h1>Contact Information Goes Here</h1>
+            <h1>Contact Us</h1>
         </div>
+        <hr style="margin-top:0" />
+        <div class="container" style="background:black; margin:20px; width: 30%; right: 0px; position:relative;">
+        </div>
+        <div class="row text-left" style="margin-left: 20px;">
+        <p>Name: </p><input type="text" name="name"><br>
+        <br><p>E-mail: </p><input type="text" name="email"><br>
+        <p><br>Message: </p><input type="text" style="height:120px;" name="msg" maxlength="65" size="50" height="50"><br><br>
+    	</div>
+
+
+        
     </div>
 
 
