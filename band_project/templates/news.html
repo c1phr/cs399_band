@@ -1,17 +1,80 @@
 {% extends "base.html" %}
 {% block page_style %}
 {#Insert any CSS here#}
+/* begin styles for RSS Feed */
+
+
+.rss-box { background-color: white; margin: 10px 15%; padding: 4px 8px; border: solid 3px tan }
+
+.rss-title, rss_title a { font-family: "verdana, arial, sans-serif;
+	font-size: 110%;
+	font-weight:normal;
+	color: #663399;
+        margin: 0px 0;
+	padding: 0;
+	letter-spacing: 1px; }
+
+.rss-items    { list-style-type: none; list-style-image: url("http://142.27.144.70/gerry/pointer.jpg") }
+
+.rss-item { color: black; font-size: 75%; font-family: Tahoma; font-weight: normal; margin: 8px 0 }
+
+.rss-item a:link, .rss-item a:visited { color: #663399; font-size: 110%; text-decoration: none }
+
+.rss-item a:hover { color: gray; text-decoration: underline }
+
+.rss-date { color: gray; font-size: 80%; font-weight: normal }
+/* buttons modeled from http://www.wellstyled.com/css-inline-buttons.html */
+
+.pod-play {
+   _width:12em;
+   margin: 0 0.2em; padding: 0.1em 0; _padding:0;
+
+   white-space:nowrap;
+   text-decoration: none;
+   vertical-align:middle;
+   background: #fb6;
+   color: black;
+   }
+.pod-play em {
+   _width:1em; _cursor:hand;
+   font-style: normal;
+   margin:0; padding: 0.1em 0.5em;
+   background: white;
+   color: #222;
+   }
+.pod-play span {
+   _width:1em; _cursor:hand;
+   margin:0; padding: 0.1em 0.5em 0.1em 0.3em;
+   }
+.pod-play:hover {
+   background: #666;
+   color: white;
+   }
+.pod-play:hover em {
+   background: black;
+   color: white
+   }
 {% endblock %}
 {% block content %}
 {#Main HTML content Goes here#}
-    <div class="container" style="margin-top:100px;">
-        <div class="row text-center">
-            <h1>News Information Goes Here</h1>
-        </div>
-    </div>
+<div class="container">
+ Feed2JS code Created by Alan Levine. It is available as open source code is at github.
 
+Hosting now provided by Brian Teller, thanks! ( Server1 )
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details http://www.gnu.org/licenses/gpl.html
+</div>
 
 {% endblock %}
 {% block js %}
 {#    Insert any JavaScript here         #}
+    <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fnews.google.com%2Fnews%3Fpz%3D1%26cf%3Dall%26ned%3Dus%26hl%3Den%26output%3Drss&chan=y&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
+
+<noscript>
+<a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fnews.google.com%2Fnews%3Fpz%3D1%26cf%3Dall%26ned%3Dus%26hl%3Den%26output%3Drss&chan=y&desc=1&utf=y&html=y">View RSS feed</a>
+</noscript>
+
+
 {% endblock %}
